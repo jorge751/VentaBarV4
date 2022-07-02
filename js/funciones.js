@@ -150,7 +150,7 @@ function renderInfoPie() {
     //
 };
 
-function delay (segundos) {
+function delay(segundos = 0) {
     return new Promise((resolve) => {
         setTimeout(resolve, segundos * 1000);
     });
