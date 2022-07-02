@@ -127,7 +127,6 @@ class ReservasController {
 
     //
     //  Devuelve array de objetos-Reserva.
-    //  Opcional "arrProps", array de filtro de propiedades.
     //
     static index(idPadreEnDOM) {
         return new Promise(resuelve => {
