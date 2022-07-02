@@ -1,0 +1,287 @@
+
+/************************************************/
+/*          Maquetado principal                 */
+/************************************************/
+
+.container {
+  display: grid;
+  grid-template-columns: 15% 40% 45%;
+  grid-template-rows: 15% 75% 10%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "menu main formulario"
+    "logo pie pie";
+  width: 100%;
+  height: 700px;
+  font: bold 18px Arial;
+  margin-top: 30px;
+}
+  
+.cabecera {
+  grid-area: cabecera;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #005555;
+}
+  
+.cabecera h2 {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+
+.cabecera span {
+  padding-top: 30px;
+  padding-left: 15px;
+  color: darkgrey;
+}
+
+.menu {
+  grid-area: menu;
+  width: 100%;
+  height: 100%;
+  background-color: #069A8E;
+}
+
+.menu h5 {
+  padding: 15px;
+  color: white;
+  background-color: #f0b48c;
+}
+
+.menu-item h5:hover {
+  color: #ffffff;
+  background-color:  #c591e8b7;
+}
+
+.main {
+  grid-area: main;
+  width: 100%;
+  height: 100%;
+  background-color: #A1E3D8;
+  overflow: auto;
+}
+  
+.main-titulo {
+  background-color: #069A8E;
+  height: 25px;
+  text-align: center;
+}
+  
+.formulario {
+  grid-area: formulario;
+  width: 100%;
+  height: 100%;
+  background-color: #A0BCC2;
+  overflow: auto;
+}
+  
+.logo {
+  grid-area: logo;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #005555;
+  line-height: 60px;
+  text-align: center;
+}
+
+.pie {
+  grid-area: pie;
+  width: 100%;
+  height: 100%;
+  background-color: #005555;
+  line-height: 60px;
+  text-align: right;
+}
+
+.clase-span-pie-descripcion-funcion {
+  color: white;
+  background-color: rgba(201, 217, 51, 0.3);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding: 5px 15px;
+}
+
+.clase-span-pie-funcion {
+  color: white;
+  background-color: rgba(204, 212, 136, 0.3);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding: 5px 15px;
+  margin-right: 40px;
+}
+
+a {
+  padding: 10px;
+  color: white;
+}
+        
+/************************************************/
+/*         Maquetado de tabla de datos          */
+/************************************************/
+
+.clase-tabla {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.clase-tabla caption {
+  font: normal 20px Arial;
+  color: white;
+  background-color: #688a92;
+  padding: 5px 3px;
+}
+
+.clase-tabla th {
+  font: normal 14px Arial;
+  background-color: #f0c5a9;
+  padding: 5px 3px;
+}
+
+.clase-tabla td {
+  font: normal 12px Arial;
+  background-color: lightblue;
+}
+
+.clase-dato-tabla-string {
+  text-align: left;
+}
+
+.clase-dato-tabla-number {
+  text-align: center;
+}
+
+.clase-div-botones-acciones-tabla {
+  padding: 5px 28px;
+}
+
+.clase-boton-tabla {
+  margin-right: 5px;
+}
+
+.clase-boton-accion-tabla {
+  margin-top: 5px;
+  margin-right: 20px;
+  padding: 5px 10px;
+}
+
+/************************************************/
+/*   Maquetado de icono de mesa en servicio     */
+/************************************************/
+
+.div-icono {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+  
+.div-icono div:hover {
+  background-color: hsla(226, 56%, 46%, 0.5);
+}
+
+.imagen-circular {
+  border-radius: 50%;
+}
+  
+.texto-sobre-imagen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.7);
+  color: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.texto-sobre-imagen-seleccionado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(236, 241, 143, 0.6);
+  color: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/************************************************/
+/*     Maquetado de formulario de instancia     */
+/************************************************/
+
+.clase-form-instancia {
+  background-color: #f0c5a9;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.clase-form-instancia h3 {
+  font: bold 20px Arial;
+  background-color: #ee9c65;
+  padding: 15px 15px;
+}
+
+.clase-div-dupla label {
+  display: inline-block;
+  width: 120px;
+  margin-left: 10px;
+}
+
+.clase-form-instancia button {
+  margin: 0 auto;
+  margin: 10px 10px;
+}
+
+.clase-div-botones {
+  padding: 5px 23px;
+}
+
+.clase-propiedad-id {
+  width: 40px;
+  text-align: right;
+}
+
+.clase-propiedad-id-largo {
+  width: 220px;
+  text-align: left;
+}
+
+.clase-propiedad-monto {
+  width: 80px;
+  text-align: right;
+}
+
+.clase-readonly {
+  background-color: rgb(214, 211, 211);
+}
+
+.clase-div-errores-en-form {
+  font: normal 15px Arial;
+  color: red;
+  background-color: #eddbd0;
+  padding: 10px 10px;
+}
+
+/************************************************/
+/*         Maquetado de ayuda del sistema       */
+/************************************************/
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
