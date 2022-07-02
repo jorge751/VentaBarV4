@@ -103,6 +103,7 @@ function renderAyuda() {
     //
 	Dom.get(idPadreEnDom).appendChild(iframe);
     //
+    //
 };
 
 
