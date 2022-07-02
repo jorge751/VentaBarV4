@@ -142,8 +142,6 @@ class ReservasController {
                         1 : (rB.fecha + rB.hora > rA.fecha + rA.hora ? -1 : 0));
                 });
             };
-            //  Id de body
-            const idTbody = 'id-Tbody-tabla';
             //  Renderiza tabla en el DOM.
             if (!isNull(idPadreEnDOM)) {
                 Dom.clearById(idPadreEnDOM);
@@ -158,7 +156,7 @@ class ReservasController {
                     textBtnExtra: 'Usar',
                     funClickCancelar: `${this.name}.cancelIndex`,
                     titulo: Reserva.nombrePlural,
-                    idTbody: idTbody}
+                    idTbody: 'id-Tbody-tabla'}
                 );
             };
             //
