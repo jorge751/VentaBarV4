@@ -99,7 +99,7 @@ function renderAyuda() {
     //
 	const iframe = Dom.create('iframe');
 	iframe.id = 'id-iframe-ayuda';
-	iframe.src = './docs/_ayuda.html';
+	iframe.src = './assets/_ayuda.html';
     //
 	Dom.get(idPadreEnDom).appendChild(iframe);
     //
