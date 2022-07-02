@@ -65,6 +65,12 @@ window.onload = function() {
     opcion = Dom.get('menu-ver-reservas');
     opcion.onclick = (evento) => ReservasController.index('id-formulario');
 
+    opcion = Dom.get('menu-ver-ayuda');
+    opcion.onclick = (evento) => renderAyuda();
+
+    opcion = Dom.get('id-logo');
+    opcion.onclick = (evento) => window.open('https://github.com/jorge751', '_blank');
+
     renderAyuda()
 
     renderInfoPie()
