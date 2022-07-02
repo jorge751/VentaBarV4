@@ -65,7 +65,6 @@ class ApiRest {
             headers: {'Content-type': 'application/json; charset=UTF-8'}
         })
         .then((response) => response.json());
-        //.then((json) => console.log('JSON DE respuesta de SET = ' + json));
 
         return true;
 
