@@ -83,7 +83,7 @@ class ApiRest {
             return alertError('ApiRest.delete(): Parámetro-id inválido.', false);
 
         //  Borra.
-        let ret = await fetch(`${URL_BASE}/${tabla}/${id}.json`, {
+        await fetch(`${URL_BASE}/${tabla}/${id}.json`, {
             method: 'DELETE',
             headers: {'Content-type': 'application/json; charset=UTF-8'}
         })
