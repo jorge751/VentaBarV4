@@ -105,6 +105,8 @@ class Dom {
         divTexto.id = 'texto-icono-' + cfg.sufijoId;
         divTexto.innerHTML = '<br>' + cfg.texto;
         divTexto.classList.add(cfg.claseDivTexto);
+        divTexto['data-toggle'] = 'tooltip';
+        divTexto['title'] = 'Editar cosumo';
         //  Apendiza a div
         divIcono.appendChild(imagen);
         divIcono.appendChild(divTexto);
@@ -136,7 +138,7 @@ class Dom {
         caption.innerHTML = cfg.titulo +
             (cfg.addCaption ? '<br> ' + cfg.addCaption : '');
         //  Variables para construcción
-        let fila, columna, boton;
+        let fila, columna, extra;
         //  Head con fila de encabezado
         const thead = tabla.createTHead();
         fila = thead.insertRow(-1);
@@ -179,26 +181,27 @@ class Dom {
             //  Botón "Borrar"
             if (cfg.funClickBorrar) {
                 columna.appendChild(
-                this.buildBoton({
-                    texto: 'Borrar',
-                    funClick: cfg.funClickBorrar,
-                    idPadreEnDOM: cfg.idPadreEnDOM,
-                    idDato: dato['id'],
-                    clase: 'clase-boton-tabla'}
+                    this.buildBoton({
+                        texto: 'Borrar',
+                        funClick: cfg.funClickBorrar,
+                        idPadreEnDOM: cfg.idPadreEnDOM,
+                        idDato: dato['id'],
+                        clase: 'clase-boton-tabla'}
                     )
                 );
             };
             //  Botón extra
             if (cfg.funClickExtra) {
-                columna.appendChild(
-                this.buildBoton({
-                    texto: cfg.textBtnExtra,
+                extra = this.buildBoton({
+                    texto: cfg.textoBtnExtra,
                     funClick: cfg.funClickExtra,
                     idPadreEnDOM: cfg.idPadreEnDOM,
                     idDato: dato['id'],
                     clase: 'clase-boton-tabla'}
-                    )
-                );
+                )
+                extra['data-toggle'] = 'tooltip';
+                extra['title'] = cfg.toolTipBtnExtra;
+                columna.appendChild(extra);
             };
             //  Apendiza columna a la fila
             fila.appendChild(columna)

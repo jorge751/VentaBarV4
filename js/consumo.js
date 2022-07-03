@@ -131,6 +131,8 @@ class ConsumosController {
     static index(idPadreEnDOM, idMesa = 0) {
         //  Resuelve mesa asociada.
         if (idMesa === 'all') {
+            //  Toastify !!!
+            Toastify({text: 'Todo el consumo...', duration: 3000}).showToast();
             this.mesaAsoc = null;
             MesasController.idSeleccionada = 0;
         } else if (!isNull(idMesa)) {

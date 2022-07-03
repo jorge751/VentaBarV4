@@ -50,7 +50,7 @@ const ret = ReservasController.index()
 window.onload = function() {
 
     let opcion = Dom.get('menu-agregar-mesa');
-    opcion.title = 'id-formulario';
+    //opcion.title = 'id-formulario';
     opcion.onclick = (evento) => MesasController.new(evento, 'id-formulario');
 
     opcion = Dom.get('menu-ver-mesas');

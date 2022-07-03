@@ -129,7 +129,7 @@ class ReservasController {
     //  Devuelve array de objetos-Reserva.
     //
     static index(idPadreEnDOM) {
-        return new Promise(resuelve => {
+        return new Promise(devuelve => {
         //  Toastify !!!
         Toastify({text: 'Todos las reservas...', duration: 3000}).showToast();
         //  Obtiene array de objetos-Reserva.
@@ -153,14 +153,15 @@ class ReservasController {
                     funClickBorrar: `${this.name}.delete`,
                     funClickAgregar: `${this.name}.new`,
                     funClickExtra: `${this.name}.abrirMesa`,
-                    textBtnExtra: 'Usar',
+                    textoBtnExtra: 'Usar',
+                    toolTipBtnExtra: 'Usar para abrir mesa',
                     funClickCancelar: `${this.name}.cancelIndex`,
                     titulo: Reserva.nombrePlural,
                     idTbody: 'id-Tbody-tabla'}
                 );
             };
             //
-            resuelve(reservas);
+            devuelve(reservas);
             })
         })
     };
