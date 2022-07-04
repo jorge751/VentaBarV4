@@ -98,7 +98,7 @@ async function renderAyuda() {
     Dom.clearById(idPadreEnDom);
     //
 
-    await fetch('./assets/_ayuda.txt')
+    await fetch('./assets/ayuda.txt')
         .then(response => response.text())
         .then((texto) => Dom.get(idPadreEnDom).innerHTML = texto);
 
