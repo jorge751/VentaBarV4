@@ -34,15 +34,15 @@ if (!Store.get('lastIdConsumo')) {
 //
 //  Reservas iniciales
 //
-const ret = ReservasController.index()
-    .then((reservas) => {
-        if (isNull(reservas)) {
-            Toastify({text: 'Reservas iniciales...', duration: 3000}).showToast();
-            new Reserva({fecha: fechaAMD(), hora: 20, descripcion: 'Flia. Pereyra'}).save();
-            new Reserva({fecha: fechaAMD(), hora: 21, descripcion: 'Club de truco'}).save();
-            new Reserva({fecha: fechaAMD(), hora: 22, descripcion: 'Cumple de jorge'}).save();
-        };
-    })
+ReservasController.index()
+.then((reservas) => {
+    if (isNull(reservas)) {
+        Toastify({text: 'Reservas iniciales...', duration: 3000}).showToast();
+        new Reserva({fecha: fechaAMD(), hora: 20, descripcion: 'Flia. Pereyra'}).save();
+        new Reserva({fecha: fechaAMD(), hora: 21, descripcion: 'Club de truco'}).save();
+        new Reserva({fecha: fechaAMD(), hora: 22, descripcion: 'Cumple de jorge'}).save();
+    };
+})
 
 //
 //  Configuración de eventos
