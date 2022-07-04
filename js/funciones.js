@@ -97,27 +97,9 @@ async function renderAyuda() {
 	const idPadreEnDom = 'id-formulario';
     Dom.clearById(idPadreEnDom);
     //
-
     await fetch('./assets/ayuda.txt')
         .then(response => response.text())
         .then((texto) => Dom.get(idPadreEnDom).innerHTML = texto);
-
-
-    //const load = await fetch('./partials/_ayuda.html');
-    //const texto = await load.text();
-    //Dom.get(idPadreEnDom).innerHTML = texto;
-        //.then(response => response.text())
-
-	//const iframe = Dom.create('iframe');
-	//iframe.id = 'id-iframe-ayuda';
-
-    //iframe.src = `${URL_BASE}/ayuda`;
-    //iframe.src = fetch(`${URL_BASE}/ayuda`).then((valor) => valor.json());
-	//iframe.src = './partials/_ayuda.html';
-
-    //
-	//Dom.get(idPadreEnDom).appendChild(iframe);
-    //
     //
 };
 
