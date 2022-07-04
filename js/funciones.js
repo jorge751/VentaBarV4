@@ -90,16 +90,24 @@ function isNull(value) {
 //
 //  Renderiza ayuda en div "id-formulario".
 //
-function renderAyuda() {
+async function renderAyuda() {
     //
     Toastify({text: 'Uso del sistema...', duration: 3000}).showToast();
     //
 	const idPadreEnDom = 'id-formulario';
     Dom.clearById(idPadreEnDom);
     //
-	const iframe = Dom.create('iframe');
-	iframe.id = 'id-iframe-ayuda';
-	iframe.src = './partials/_ayuda.html';
+
+    Dom.get(idPadreEnDom).innerHTML = await fetch('./partials/_ayuda.html')
+        .then(response => response.text())
+
+	//const iframe = Dom.create('iframe');
+	//iframe.id = 'id-iframe-ayuda';
+
+    //iframe.src = `${URL_BASE}/ayuda`;
+    //iframe.src = fetch(`${URL_BASE}/ayuda`).then((valor) => valor.json());
+	//iframe.src = './partials/_ayuda.html';
+
     //
 	Dom.get(idPadreEnDom).appendChild(iframe);
     //
