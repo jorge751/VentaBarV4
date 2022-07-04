@@ -90,7 +90,7 @@ function isNull(value) {
 //
 //  Renderiza ayuda en div "id-formulario".
 //
-function renderAyuda() {
+async function renderAyuda() {
     //
     Toastify({text: 'Uso del sistema...', duration: 3000}).showToast();
     //
@@ -98,8 +98,11 @@ function renderAyuda() {
     Dom.clearById(idPadreEnDom);
     //
 
-    Dom.get(idPadreEnDom).innerHTML = fetch('./partials/_ayuda.html')
-        .then(response => response.text())
+    const load = await fetch('./partials/_ayuda.html');
+    const texto = await load.text();
+
+    Dom.get(idPadreEnDom).innerHTML = texto;
+        //.then(response => response.text())
 
 	//const iframe = Dom.create('iframe');
 	//iframe.id = 'id-iframe-ayuda';
