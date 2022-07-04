@@ -116,7 +116,7 @@ async function renderAyuda() {
 	//iframe.src = './partials/_ayuda.html';
 
     //
-	Dom.get(idPadreEnDom).appendChild(iframe);
+	//Dom.get(idPadreEnDom).appendChild(iframe);
     //
     //
 };
