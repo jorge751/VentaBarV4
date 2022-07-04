@@ -99,7 +99,14 @@ async function renderAyuda() {
     //
     await fetch('./assets/ayuda.txt')
         .then(response => response.text())
-        .then((texto) => Dom.get(idPadreEnDom).innerHTML = texto);
+        .then((texto) => {
+            const padre = Dom.get(idPadreEnDom);
+            const div = Dom.create('div');
+            div.id = 'ayuda';
+            div.style.padding = "20px 20px";
+            div.innerHTML = texto;
+            padre.appendChild(div);
+        });
     //
 };
 
