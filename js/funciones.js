@@ -98,10 +98,14 @@ async function renderAyuda() {
     Dom.clearById(idPadreEnDom);
     //
 
-    const load = await fetch('./partials/_ayuda.html');
-    const texto = await load.text();
+    await fetch('./partials/_ayuda.html')
+        .then(response => response.text())
+        .then((texto) => Dom.get(idPadreEnDom).innerHTML = texto);
 
-    Dom.get(idPadreEnDom).innerHTML = texto;
+
+    //const load = await fetch('./partials/_ayuda.html');
+    //const texto = await load.text();
+    //Dom.get(idPadreEnDom).innerHTML = texto;
         //.then(response => response.text())
 
 	//const iframe = Dom.create('iframe');
